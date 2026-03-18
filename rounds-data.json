@@ -1,64 +1,66 @@
 {
   "rounds": [
     {
-    "id": "toys",
-    "title": "Toys (Brinquedos)",
-    "words": [
-        { "id": 1,   "word": "BICYCLE",      "clue": "Tem duas rodas e você pedala.",                         "image": "images/bicycle.png" },
-        { "id": 2,   "word": "PUZZLE",       "clue": "Você monta peças para formar uma imagem.",              "image": "images/puzzles.png" },
-        { "id": 3,   "word": "BALL",         "clue": "Bate, quica e rola: usada em muitos jogos.",            "image": "images/ball.png" },
-        { "id": 4,   "word": "DOLL",         "clue": "Brinquedo que parece uma pessoa.",                      "image": "images/doll.png" },
-        { "id": 5,   "word": "CAR",          "clue": "Tem quatro rodas e anda quando você empurra.",          "image": "images/car.png" },
-        { "id": 6,   "word": "TOP",          "clue": "Gira quando você puxa a corda.",                        "image": "images/top.png" },
-        { "id": 7,   "word": "YOYO",         "clue": "Sobe e desce preso por uma cordinha.",                  "image": "images/yo-yo.png" },
-        { "id": 8,   "word": "LEGO",         "clue": "Blocos de montar que se encaixam.",                     "image": "images/lego.png" },
-        { "id": 9,   "word": "PLANE",        "clue": "Brinquedo de avião que voa alto na imaginação.",        "image": "images/plane.png" },
-        { "id": 10,  "word": "HELICOPTER",   "clue": "Tem hélices e gira no ar.",                             "image": "images/helicopter.png" },
-        { "id": 11,  "word": "SCOOTER",      "clue": "Você se apoia e desliza com uma perna.",                "image": "images/scooter.png" },
-        { "id": 12,  "word": "KITE",         "clue": "Basta vento para voar bem alto.",                        "image": "images/kite.png" },
-        { "id": 13,  "word": "TRUCK",        "clue": "Caminhão de brinquedo para carregar tudo.",             "image": "images/truck.png" },
-        { "id": 14,  "word": "TEDDY BEAR",   "clue": "Ursinho macio e fofo para abraçar.",                    "image": "images/teddy-bear.png" },
-        { "id": 15,  "word": "TRAIN",        "clue": "Corre nos trilhos fazendo tchu‑tchu.",                  "image": "images/train.png" }
-    ]
+      "id": "toys",
+      "title": "Toys (Brinquedos)",
+      "words": [
+        { "id": 1,   "word": "BICYCLE",      "clue": "Tem duas rodas e você pedala." },
+        { "id": 2,   "word": "PUZZLE",       "clue": "Você monta peças para formar uma imagem." },
+        { "id": 3,   "word": "BALL",         "clue": "Bate, quica e rola: usada em muitos jogos." },
+        { "id": 4,   "word": "DOLL",         "clue": "Brinquedo que parece uma pessoa." },
+        { "id": 5,   "word": "CAR",          "clue": "Tem quatro rodas e anda quando você empurra." },
+        { "id": 6,   "word": "TOP",          "clue": "Gira quando você puxa a corda." },
+        { "id": 7,   "word": "YOYO",         "clue": "Sobe e desce preso por uma cordinha." },
+        { "id": 8,   "word": "LEGO",         "clue": "Blocos de montar que se encaixam." },
+        { "id": 9,   "word": "PLANE",        "clue": "Brinquedo de avião que voa alto na imaginação." },
+        { "id": 10,  "word": "HELICOPTER",   "clue": "Tem hélices e gira no ar." },
+        { "id": 11,  "word": "SCOOTER",      "clue": "Você se apoia e desliza com uma perna." },
+        { "id": 12,  "word": "KITE",         "clue": "Basta vento para voar bem alto." },
+        { "id": 13,  "word": "TRUCK",        "clue": "Caminhão de brinquedo para carregar tudo." },
+        { "id": 14,  "word": "TEDDY BEAR",   "clue": "Ursinho macio e fofo para abraçar." },
+        { "id": 15,  "word": "TRAIN",        "clue": "Corre nos trilhos fazendo tchu‑tchu." }
+      ]
     },
+
     {
-    "id": "colors",
-    "title": "Colors (Cores)",
-    "words": [
-        { "id": 101, "word": "RED",    "clue": "Cor do morango.",        "color": "#e53935" },
-        { "id": 102, "word": "GREEN",  "clue": "Cor das plantas e da natureza.",                              "color": "#43a047" },
-        { "id": 103, "word": "PURPLE", "clue": "Cor da uva.",  "color": "#8e24aa" },
-        { "id": 104, "word": "YELLOW", "clue": "Cor brilhante, como o sol.",                                  "color": "#fdd835" },
-        { "id": 105, "word": "BLACK",  "clue": "Cor do pneu do carro.",                          "color": "#000000" },
-        { "id": 106, "word": "BROWN",  "clue": "Cor da madeira e de alguns animais.",                         "color": "#8d6e63" },
-        { "id": 107, "word": "ORANGE", "clue": "Cor da fruta laranja e do pôr do sol.",                       "color": "#fb8c00" },
-        { "id": 108, "word": "WHITE",  "clue": "Cor clara como a neve.",                                      "color": "#ffffff" },
-        { "id": 109, "word": "PINK",   "clue": "Cor suave, como da flor rosa.",                           "color": "#ec407a" },
+      "id": "colors",
+      "title": "Colors (Cores)",
+      "words": [
+        { "id": 101, "word": "RED",    "clue": "Cor do morango.",                     "color": "#e53935" },
+        { "id": 102, "word": "GREEN",  "clue": "Cor das plantas e da natureza.",      "color": "#43a047" },
+        { "id": 103, "word": "PURPLE", "clue": "Cor da uva.",                          "color": "#8e24aa" },
+        { "id": 104, "word": "YELLOW", "clue": "Cor brilhante, como o sol.",           "color": "#fdd835" },
+        { "id": 105, "word": "BLACK",  "clue": "Cor do pneu do carro.",                "color": "#000000" },
+        { "id": 106, "word": "BROWN",  "clue": "Cor da madeira e de alguns animais.",  "color": "#8d6e63" },
+        { "id": 107, "word": "ORANGE", "clue": "Cor da fruta laranja.",                "color": "#fb8c00" },
+        { "id": 108, "word": "WHITE",  "clue": "Cor clara como a neve.",               "color": "#ffffff" },
+        { "id": 109, "word": "PINK",   "clue": "Cor suave, como a flor rosa.",         "color": "#ec407a" },
         { "id": 110, "word": "GRAY",   "clue": "Cor do elefante.",                     "color": "#9e9e9e" },
-        { "id": 111, "word": "BLUE",   "clue": "Cor do céu e do mar.",                                        "color": "#1e88e5" }
-    ]
+        { "id": 111, "word": "BLUE",   "clue": "Cor do céu e do mar.",                 "color": "#1e88e5" }
+      ]
     },
+
     {
-    "id": "classroom",
-    "title": "Classroom Objects (Objetos de sala de aula)",
-    "words": [
-        { "id": 201, "word": "PENCIL",           "clue": "Usado para escrever no caderno.",                  "image": "images/1.jpg" },
-        { "id": 202, "word": "ERASER",           "clue": "Serve para apagar o que você escreveu.",           "image": "images/2.jpg" },
-        { "id": 203, "word": "PEN",              "clue": "Escreve com tinta, diferente do lápis.",           "image": "images/3.jpg" },
-        { "id": 204, "word": "PENCIL SHARPENER", "clue": "Deixa a ponta do lápis bem fina.",                 "image": "images/4.jpg" },
-        { "id": 205, "word": "NOTEBOOK",         "clue": "Onde você escreve suas lições e anotações.",       "image": "images/5.jpg" },
-        { "id": 206, "word": "BOOK",             "clue": "Tem páginas com histórias ou conteúdos para estudar.", "image": "images/6.jpg" },
-        { "id": 207, "word": "PENCIL CASE",      "clue": "Onde você guarda lápis, canetas e borracha.",      "image": "images/7.jpg" },
-        { "id": 208, "word": "BACKPACK",         "clue": "Mochila onde você leva seu material escolar.",     "image": "images/8.jpg" },
-        { "id": 209, "word": "RULER",            "clue": "Usada para medir e fazer linhas retas.",           "image": "images/9.jpg" },
-        { "id": 210, "word": "CRAYONS",          "clue": "Servem para colorir desenhos.",                    "image": "images/10.jpg" },
-        { "id": 211, "word": "SCISSORS",         "clue": "Ferramenta usada para cortar papel.",              "image": "images/11.jpg" },
-        { "id": 212, "word": "PAINT",            "clue": "Tinta usada para pintar com pincel.",              "image": "images/12.jpg" },
-        { "id": 213, "word": "PAINT BRUSH",      "clue": "Pincel usado para pintar com tinta.",              "image": "images/13.jpg" },
-        { "id": 214, "word": "FOLDER",           "clue": "Pasta onde você guarda folhas e trabalhos.",       "image": "images/14.jpg" },
-        { "id": 215, "word": "CALCULATOR",       "clue": "Ajuda a fazer contas rapidamente.",                "image": "images/15.jpg" },
-        { "id": 216, "word": "GLUE",             "clue": "Cola usada para juntar papéis.",                   "image": "images/16.jpg" }
-    ]
+      "id": "classroom",
+      "title": "Classroom Objects (Objetos de sala de aula)",
+      "words": [
+        { "id": 201, "word": "PENCIL",           "clue": "Usado para escrever no caderno." },
+        { "id": 202, "word": "ERASER",           "clue": "Serve para apagar o que você escreveu." },
+        { "id": 203, "word": "PEN",              "clue": "Escreve com tinta, diferente do lápis." },
+        { "id": 204, "word": "PENCIL SHARPENER", "clue": "Deixa a ponta do lápis bem fina." },
+        { "id": 205, "word": "NOTEBOOK",         "clue": "Onde você escreve suas lições e anotações." },
+        { "id": 206, "word": "BOOK",             "clue": "Tem páginas com histórias ou conteúdos para estudar." },
+        { "id": 207, "word": "PENCIL CASE",      "clue": "Onde você guarda lápis, canetas e borracha." },
+        { "id": 208, "word": "BACKPACK",         "clue": "Mochila onde você leva seu material escolar." },
+        { "id": 209, "word": "RULER",            "clue": "Usada para medir e fazer linhas retas." },
+        { "id": 210, "word": "CRAYONS",          "clue": "Servem para colorir desenhos." },
+        { "id": 211, "word": "SCISSORS",         "clue": "Ferramenta usada para cortar papel." },
+        { "id": 212, "word": "PAINT",            "clue": "Tinta usada para pintar com pincel." },
+        { "id": 213, "word": "PAINT BRUSH",      "clue": "Pincel usado para pintar com tinta." },
+        { "id": 214, "word": "FOLDER",           "clue": "Pasta onde você guarda folhas e trabalhos." },
+        { "id": 215, "word": "CALCULATOR",       "clue": "Ajuda a fazer contas rapidamente." },
+        { "id": 216, "word": "GLUE",             "clue": "Cola usada para juntar papéis." }
+      ]
     }
   ]
 }
