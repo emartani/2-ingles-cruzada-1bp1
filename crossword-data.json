@@ -1,0 +1,13 @@
+{
+  "title": "Brinquedos",
+  "words": [
+    { "id": 1, "word": "BICICLETA", "clue": "Tem duas rodas e você pedala." },
+    { "id": 2, "word": "QUEBRA-CABEÇA", "clue": "Você monta peças para formar uma imagem." },
+    { "id": 3, "word": "BOLA", "clue": "Redonda, usada em muitos esportes." },
+    { "id": 4, "word": "BONECA", "clue": "Brinquedo que parece uma pessoa." },
+    { "id": 5, "word": "CARRINHO", "clue": "Quatro rodas, corre pela sala." },
+    { "id": 6, "word": "PIÃO", "clue": "Gira quando você puxa a corda." },
+    { "id": 7, "word": "IOIÔ", "clue": "Sobe e desce preso por uma cordinha." },
+    { "id": 8, "word": "LEGO", "clue": "Blocos de montar que se encaixam." }
+  ]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crossword Kids • Rodadas por tema</title>
+
+  <!-- Fonte divertida -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Crossword Kids</h1>
+    <div class="status">
+      <div class="score" aria-live="polite">Pontuação: <span id="score">0</span></div>
+      <div class="progress" aria-live="polite">Concluídas: <span id="doneCount">0</span>/<span id="totalCount">0</span></div>
+    </div>
+  </header>
+
+  <nav class="round-nav">
+    <label for="roundSelect">Rodada:</label>
+    <select id="roundSelect" aria-label="Selecionar rodada">
+      <option value="0">1 • Brinquedos</option>
+      <option value="1">2 • Cores</option>
+      <option value="2">3 • Objetos de sala de aula</option>
+    </select>
+    <div class="round-buttons">
+      <button id="prevRound" class="btn ghost" type="button">◀ Anterior</button>
+      <button id="nextRound" class="btn ghost" type="button">Próxima ▶</button>
+      <button id="reloadRound" class="btn primary" type="button">Começar/Resetar rodada</button>
+    </div>
+  </nav>
+
+  <main class="layout">
+    <section class="board-panel">
+      <h2 id="puzzleTitle" class="subtitle"></h2>
+      <div id="board" class="board" role="grid" aria-label="Tabuleiro de palavras-cruzadas"></div>
+
+      <div class="controls">
+        <button id="checkBtn" class="btn primary" type="button">Verificar</button>
+        <button id="hintBtn" class="btn warn" type="button" title="Revela uma letra (−1 ponto)">Dica</button>
+        <button id="resetBtn" class="btn ghost" type="button">Limpar respostas</button>
+      </div>
+      <p class="tip">Toque em uma dica para selecionar a palavra. A <b>primeira letra</b> já aparece!</p>
+    </section>
+
+    <aside class="clues-panel">
+      <h3>Dicas (em português)</h3>
+      <ul id="cluesList" class="clues" aria-label="Lista de dicas"></ul>
+    </aside>
+  </main>
+
+  <!-- Confete -->
+  <div id="confetti"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
