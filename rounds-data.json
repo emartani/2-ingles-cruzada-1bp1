@@ -23,21 +23,21 @@
     },
 
     {
-      "id": "colors",
-      "title": "Colors (Cores)",
-      "words": [
-        { "id": 101, "word": "RED",    "clue": "Cor do morango.",                     "color": "#e53935" },
-        { "id": 102, "word": "GREEN",  "clue": "Cor das plantas e da natureza.",      "color": "#43a047" },
-        { "id": 103, "word": "PURPLE", "clue": "Cor da uva.",                          "color": "#8e24aa" },
-        { "id": 104, "word": "YELLOW", "clue": "Cor brilhante, como o sol.",           "color": "#fdd835" },
-        { "id": 105, "word": "BLACK",  "clue": "Cor do pneu do carro.",                "color": "#000000" },
-        { "id": 106, "word": "BROWN",  "clue": "Cor da madeira e de alguns animais.",  "color": "#8d6e63" },
-        { "id": 107, "word": "ORANGE", "clue": "Cor da fruta laranja.",                "color": "#fb8c00" },
-        { "id": 108, "word": "WHITE",  "clue": "Cor clara como a neve.",               "color": "#ffffff" },
-        { "id": 109, "word": "PINK",   "clue": "Cor suave, como a flor rosa.",         "color": "#ec407a" },
-        { "id": 110, "word": "GRAY",   "clue": "Cor do elefante.",                     "color": "#9e9e9e" },
-        { "id": 111, "word": "BLUE",   "clue": "Cor do céu e do mar.",                 "color": "#1e88e5" }
-      ]
+    "id": "colors",
+    "title": "Colors (Cores)",
+    "words": [
+        { "id": 101, "word": "RED",    "clue": "Cor do morango." },
+        { "id": 102, "word": "GREEN",  "clue": "Cor das plantas e da natureza." },
+        { "id": 103, "word": "PURPLE", "clue": "Cor da uva." },
+        { "id": 104, "word": "YELLOW", "clue": "Cor brilhante, como o sol." },
+        { "id": 105, "word": "BLACK",  "clue": "Cor do pneu do carro." },
+        { "id": 106, "word": "BROWN",  "clue": "Cor da madeira e de alguns animais." },
+        { "id": 107, "word": "ORANGE", "clue": "Cor da fruta laranja." },
+        { "id": 108, "word": "WHITE",  "clue": "Cor clara como a neve." },
+        { "id": 109, "word": "PINK",   "clue": "Cor suave, como a flor rosa." },
+        { "id": 110, "word": "GRAY",   "clue": "Cor do elefante." },
+        { "id": 111, "word": "BLUE",   "clue": "Cor do céu e do mar." }
+    ]
     },
 
     {

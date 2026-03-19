@@ -6,7 +6,8 @@
    - Seleção aleatória de ~8 palavras por rodada
    - Regras "no-touch" para evitar encostar em extremidades e laterais
    - Fallback mantém as palavras próximas (bloco coeso)
-   - Chips de cor e miniaturas nas dicas
+   - Dicas SEM imagens (apenas texto e chip de cor quando houver)
+   - Overlay de parabéns + confete + avanço automático para a próxima rodada
 */
 
 const state = {
@@ -15,12 +16,13 @@ const state = {
   grid: [],
   rows: 15,
   cols: 15,
-  placed: [],        // {id, word, norm, clue, color?, image?, row, col, dir, cells[], start}
+  placed: [],        // {id, word, norm, clue, color?, row, col, dir, cells[], start}
   activeIndex: null,
   score: 0,
   solved: new Set(),
   total: 0,
   usedBounds: { minR: Infinity, maxR: -Infinity, minC: Infinity, maxC: -Infinity },
+  roundOver: false,  // evita disparo duplo ao concluir a rodada
 };
 
 const WORDS_PER_ROUND = 8; // alvo por rodada
@@ -43,6 +45,11 @@ const el = {
 };
 
 const DIR = { ACROSS: 'across', DOWN: 'down' };
+
+
+// Áudio de celebração
+const celebrationAudio = new Audio('celebration.mp3');
+celebrationAudio.volume = 0.9
 
 /* ----------------------- Utils ----------------------- */
 function shuffle(arr){
@@ -97,6 +104,7 @@ async function initRound(index){
   state.score = 0;
   state.solved = new Set();
   state.usedBounds = { minR: Infinity, maxR: -Infinity, minC: Infinity, maxC: -Infinity };
+  state.roundOver = false;
   el.score.textContent = 0;
   el.doneCount.textContent = 0;
 
@@ -106,8 +114,7 @@ async function initRound(index){
     word: w.word,
     norm: norm(w.word),
     clue: w.clue,
-    color: w.color || null,
-    image: w.image || null
+    color: w.color || null
   }));
   const selected = shuffle(pool).slice(0, Math.min(WORDS_PER_ROUND, pool.length));
   const words = selected.sort((a,b)=> b.norm.length - a.norm.length);
@@ -182,7 +189,7 @@ function canPlaceAt(row, col, dir, word){
 function placeWord(row, col, dir, obj){
   const entry = {
     id: obj.id, word: obj.word, norm: obj.norm, clue: obj.clue,
-    color: obj.color, image: obj.image,
+    color: obj.color,
     row, col, dir, cells: []
   };
 
@@ -393,14 +400,13 @@ function renderClues(){
     const dirIcon = `<span class="dir">${p.dir===DIR.ACROSS ? '↔' : '↕'}</span>`;
     const num = `<b>${idx+1}.</b>`;
     const chip = p.color ? `<span class="badge-color" style="background:${p.color}"></span>` : '';
-    // ❌ removido: nada de imagem aqui
 
+    // Sem imagens nas dicas
     li.innerHTML = `${dirIcon}${num} ${chip} ${p.clue}`;
     li.addEventListener('click', ()=> { setActiveById(p.id); focusFirstEditable(p); });
     el.cluesList.appendChild(li);
   });
 }
-
 
 /* ----------------------- Foco / Navegação ----------------------- */
 function setActiveById(id){
@@ -513,7 +519,9 @@ function checkOne(p){
       }
     });
     el.doneCount.textContent = state.solved.size;
-    if(state.solved.size === state.total) celebrate();
+    if(state.solved.size === state.total){
+      onRoundCompleted();  // 🎉 mostra parabéns + vai para a próxima
+    }
   }
 }
 
@@ -557,7 +565,7 @@ function resetBoard(){
   });
 }
 
-/* ----------------------- Celebrate ----------------------- */
+/* ----------------------- Celebrate + Overlay + Avanço ----------------------- */
 function celebrate(){
   for(let i=0;i<120;i++){
     const piece = document.createElement('div');
@@ -573,6 +581,56 @@ function celebrate(){
 function randomColor(){
   const colors = ['#6c5ce7','#00b894','#fdcb6e','#ff7675','#74b9ff','#a29bfe','#55efc4'];
   return colors[Math.floor(Math.random()*colors.length)];
+}
+
+function showRoundOverlay(message, submessage, delayMs = 7000){
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+  overlay.innerHTML = `
+    <div class="overlay-card">
+      <h2>🎉 ${message}</h2>
+      <p>${submessage}</p>
+      <p class="overlay-note">Carregando a próxima rodada...</p>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  requestAnimationFrame(()=> overlay.classList.add('visible'));
+  setTimeout(()=>{
+    overlay.classList.remove('visible');
+    setTimeout(()=> overlay.remove(), 350);
+  }, delayMs);
+}
+
+function advanceToNextRound(){
+  const lastIndex = state.data.rounds.length - 1;
+  const next = (state.roundIndex < lastIndex) ? state.roundIndex + 1 : 0; // wrap
+  el.roundSelect.value = String(next);
+  initRound(next);
+}
+
+function onRoundCompleted(){
+  if(state.roundOver) return;
+  state.roundOver = true;
+
+  // som de vitória
+  try {
+    celebrationAudio.currentTime = 0;
+    celebrationAudio.play();
+  } catch(e){
+    console.log("Falha ao tocar som:", e);
+  }
+
+  // confeti
+  celebrate();
+
+  // mensagem de parabéns
+  showRoundOverlay(
+    'Parabéns! Você concluiu esta rodada!',
+    'Muito bem! A próxima rodada começará em instantes.'
+  );
+
+  // ⏭próxima rodada após 7s (já ajustado)
+  setTimeout(advanceToNextRound, 7000);
 }
 
 /* ----------------------- Boot ----------------------- */
